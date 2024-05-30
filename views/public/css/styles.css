@@ -1,0 +1,12 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+  
+.gif-background {
+  flex: 1;
+  background: url('../public/img/leary-avantgarde.gif') center/cover no-repeat;
+  overflow: hidden;
+}
