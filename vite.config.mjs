@@ -5,9 +5,11 @@ import handlebars from 'vite-plugin-handlebars';
 const pageData = {
   '/views/index.html': {
     title: 'Main Page',
+    currentPage: 'main',
   },
   '/views/test1.html': {
     title: 'Sub Page',
+    currentPage: 'about',
   },
 };
 
@@ -18,7 +20,7 @@ export default defineConfig({
   },
   plugins: [
     handlebars({
-      partialDirectory: resolve(__dirname, 'layers'),
+      partialDirectory: resolve(__dirname, 'views', 'layers'),
       context(pagePath) {
         return pageData[pagePath];
       },

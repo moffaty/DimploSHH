@@ -1,0 +1,82 @@
+/* Общие стили */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+/* Стили для изображения фона */
+.gif-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  opacity: 0; /* Начальное значение непрозрачности */
+  animation: fadeIn 1s ease forwards; /* Анимация для появления */
+}
+.gif-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Чтобы изображение было под другими элементами */
+}
+/* Стили для текста */
+.text-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Чтобы текст был над фоном */
+  text-align: center;
+  color: white; /* Цвет текста */
+  font-size: 24px; /* Размер текста */
+  font-weight: bold; /* Жирный текст */
+}
+/* Добавим стили для контейнера навигации */
+.nav-container {
+  position: relative; /* Для относительного позиционирования */
+  margin-bottom: 50px; /* Добавим отступ снизу, чтобы контент не перекрывался */
+}
+/* Сделаем стили для списков навигации */
+.nav-container ul {
+  list-style-type: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем отступы внутри списка */
+  margin: 0; /* Убираем внешние отступы списка */
+  display: flex; /* Используем flexbox для выравнивания элементов */
+  justify-content: space-around; /* Равномерно распределяем элементы */
+  position: absolute; /* Абсолютное позиционирование */
+  bottom: 5%; /* Позиционируем список снизу */
+  width: 100%; /* Ширина списка равна ширине контейнера */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Белый фон с прозрачностью 0.7 */
+  backdrop-filter: blur(
+    10px
+  ); /* Эффект размытия фона для применения к бэкграунду */
+  padding: 10px; /* Добавим отступы внутри списка */
+}
+/* Уберем стили для ссылок в списке навигации */
+.nav-container ul li a {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: inherit; /* Наследуем цвет от родительского элемента */
+  transition: all 0.4s ease-in-out; /* Плавное изменение всех свойств */
+}
+/* Добавим стили для наведения на ссылки */
+.nav-container ul li a:hover {
+    color: rgb(202, 202, 0); /* Изменяем цвет текста при наведении */
+}
+
+/* Анимация для появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0.9;
+        transform: translateY(-50px); /* Начальное значение смещения вверх */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Конечное значение без смещения */
+    }
+}
