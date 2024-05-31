@@ -1,8 +1,18 @@
+@font-face {
+    font-family: 'Seymour-One';
+    src: url('../font/Seymour_One/SeymourOne-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+@font-face {
+  font-family: 'Danfo';
+  src: url('../font/Danfo/Danfo-Regular-VariableFont_ELSH.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 /* Общие стили */
 body,
 html {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  font-family: 'Seymour-One', serif !important;
 }
 /* Стили для изображения фона */
 .gif-container {

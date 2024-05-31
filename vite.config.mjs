@@ -14,7 +14,7 @@ const pageData = {
 };
 
 export default defineConfig({
-  root: './',
+  root: './', 
   build: {
     outDir: 'views/public',
   },
@@ -26,4 +26,13 @@ export default defineConfig({
       },
     }),
   ],
+  server: {
+    watch: {
+      open: true, // Open the browser on server start
+      // Enable watching for file changes
+      enabled: true,
+      // Ignore certain files or patterns
+      ignored: ['**/node_modules/**', '**/dist/**'],
+    },
+  },
 });

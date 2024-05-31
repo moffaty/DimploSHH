@@ -5,7 +5,6 @@ function stickHeader() {
         document.documentElement.scrollTop > window.innerHeight
     ) {
         header.classList.add('fixed-top');
-        console.log(header.querySelector('ul'))
         header.querySelector('ul').style.position = 'relative';
         header.style.backgroundColor = 'rgb(209, 194, 161)';
     }
