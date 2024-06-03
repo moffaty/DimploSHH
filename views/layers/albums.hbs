@@ -1,0 +1,30 @@
+<section class="page-section bg-light pt-1" id="portfolio">
+    <div class="container">
+        <div class="text-center">
+            <h3 class="section-subheading text-muted">Прослушивайте самые последние релизы прямо сейчас!</h3>
+        </div>
+        <div class="row">
+            {{#each albums}}
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <!-- Portfolio item {{id}} -->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-title="{{title}}" data-date="{{date}}" data-text="{{text}}" data-image="{{image}}" data-bs-toggle="modal" href="#portfolioModal{{id}}">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <svg class="svg-inline--fa fa-plus fa-3x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                                    <path fill="currentColor" d="M240 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H176V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H240V80z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <img class="img-fluid w-100" src="{{image}}" alt="Обложка альбома" title="{{title}}">
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">{{title}}</div>
+                        <div class="portfolio-caption-subheading text-muted">{{date}}</div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+    </div>
+    <div class="connector"></div>
+</section>

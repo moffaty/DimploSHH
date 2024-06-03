@@ -9,38 +9,24 @@
         alt="backGIF"
       />
       <!-- Текст -->
-      <div class="text-container">NeOOOON JOY</div>
+      <div class="text-container">{{ musicName }}</div>
     </div>
     {{> header}}
-    <!-- Добавим контейнер для навигации -->
-    <div class="my-5">
-      <div class="p-5 text-center bg-body-tertiary">
-        <div class="container py-5">
-          <h1 class="text-body-emphasis">Full-width jumbotron</h1>
-          <p class="col-lg-8 mx-auto lead">
-            This takes the basic jumbotron above and makes its background
-            edge-to-edge with a <code>.container</code> inside to align content.
-            Similar to above, it's been recreated with built-in grid and utility
-            classes.
-          </p>
-        </div>
-      </div>
-    </div>
     <div
-      class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary"
+      class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center"
     >
       <div class="col-md-6 p-lg-5 mx-auto my-5">
-        <h1 class="display-3 fw-bold">Designed for engineers</h1>
+        <h2 class="display-3 fw-bold">{{musicName}} прорывной артист в {{musicGenre}}</h2>
         <h3 class="fw-normal text-muted mb-3">
-          Build anything you want with Aperture
+          Слушайте свежие альбомы прямо сейчас!
         </h3>
         <div class="d-flex gap-3 justify-content-center lead fw-normal">
-          <a class="icon-link" href="#">
-            Learn more
+          <a class="icon-link" href="#about">
+            О исполнителе
             <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
           </a>
-          <a class="icon-link" href="#">
-            Buy
+          <a class="icon-link" href="#portfolio">
+            Купить альбом
             <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
           </a>
         </div>
@@ -50,47 +36,48 @@
         class="product-device product-device-2 shadow-sm d-none d-md-block"
       ></div>
     </div>
+    <div class="left-text"><img src="public/img/honey.png" height="100px" style="transform: scaleX(-1);"></div>
+    <div class="right-text"><img src="public/img/honey.png" height="100px"></div>
     <div
-      class="text-bg-warning me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
+      class="text-bg-warning pt-3 pt-md-5 px-md-5 text-center overflow-hidden"
     >
       <div class="my-3 py-3">
-        <h2 class="display-5">Another headline</h2>
-        <p class="lead">And an even wittier subheading.</p>
+        <h2 class="display-5">Что такое SynthWave?</h2>
+        <p class="lead text-muted">Лучшее что вы слышали...</p>
       </div>
       <div
-        class="bg-body-tertiary shadow-sm mx-auto"
+        class="bg-body-tertiary shadow-sm mx-auto d-flex align-items-center justify-content-center"
         style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
-      ></div>
+      >
+    <p>"Synthwave" - это жанр электронной музыки, который олицетворяет собой смесь ретро-футуристического звучания 80-х годов и современных электронных элементов. Исполнители synthwave создают музыку, которая захватывает слушателя и переносит его в мир киберпанка, насыщенный яркими цветами и огнями ночных городов.</p></div>
     </div>
-    <section data-bs-version="5" class="Article2 cid-sISp0JUE9m" id="article3-26">
-        <div class="container">
-            <div class="wrapper">
-                <h2 class="mbr-fonts-style mbr-section-title display-2">Course program</h2>
-                <div class="row">
-                    <div class="title col-12">
-                        <p class="mbr-fonts-style mbr-text display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Lectus vestibulum mattis ullamcorper velit sed. Tempor id eu nisl
-                            nunc mi ipsum faucibus. Ornare quam viverra orci sagittis eu. In egestas erat imperdiet sed
-                            euismod nisi porta lorem mollis. Bibendum at varius vel pharetra vel turpis nunc. Amet mauris
-                            commodo quis imperdiet massa. Tincidunt eget nullam non nisi est sit. Massa tincidunt nunc
-                            pulvinar sapien et ligula ullamcorper. In arcu cursus euismod quis. Vitae auctor eu augue ut
-                            lectus arcu bibendum. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend
-                            donec. Urna id volutpat lacus laoreet non curabitur.
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <div
+    class="text-bg-warning pb-5 px-md-5 text-center overflow-hidden"
+  >
+    <div
+      class="bg-body-tertiary shadow-sm mx-auto d-flex align-items-center justify-content-center"
+      style="width: 80%; height: 300px; border-radius: 0 0 21px 21px"
+    ><p>При прослушивании synthwave музыки, вы можете ощутить волнение и ностальгию за эпоху, которая кажется как будто уже была, но все еще остается в наших сердцах и воспоминаниях. Отличительными чертами этого жанра являются кибернетическая атмосфера, глубокие синтезаторные звуки и энергичные ритмы, которые заставляют двигаться даже самого закоренелого скептика.</p></div>
+  </div>
+    <section data-bs-version="5" class="Article2 cid-sISp0JUE9m m-0 p-0" id="afisha">
+        <div class="wrapper p-auto m-auto d-flex align-items-center justify-content-center flex-column">
+            {{> concerts}}
+            {{> concerts}}
+            {{> concerts}}
+            <a href="#about" class="mt-5 p-auto btn btn-warning text-decoration-none text-black font-weight-bold">Узнайте историю нового альбома прямо сейчас!</a>
         </div>
     </section>
-    {{> section_with_background}}
     {{> about}}
+    {{> albums}}
     {{> team}}
-    {{> concerts}}
     {{> contact}}
     {{> modals}}
+    {{> sign}}
+    {{> contacts}}
     {{> footer}}
+    <script src="public/js/speed.js"></script>
     <script src="public/js/gif.js"></script>
+    <script src="public/js/anim.js"></script>
     <script src="public/js/header.js"></script>
     <script src="public/js/modals.js"></script>
   </body>

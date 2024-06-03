@@ -6,13 +6,16 @@
   font-family: 'Danfo';
   src: url('../font/Danfo/Danfo-Regular-VariableFont_ELSH.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
+
 /* Общие стили */
 body,
 html {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  font-family: 'Seymour-One', serif !important;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 /* Стили для изображения фона */
 .gif-container {
@@ -89,4 +92,21 @@ html {
         opacity: 1;
         transform: translateY(0); /* Конечное значение без смещения */
     }
+}
+
+#about {
+  background-image: url('../img/texture_2.jpg');
+  background-repeat: repeat; /* повторять изображение по горизонтали и вертикали */
+  background-size: auto; /* автоматически подстроить размер фона */
+}
+
+#about_cover {
+  background-color: rgba(255, 255, 255, 0.7); /* полупрозрачный белый цвет */
+}
+
+.timeline-image {
+  clip-path: polygon(50% 0%, 85% 25%, 85% 75%, 50% 100%, 15% 75%, 15% 25%);
+  border-color: '';
+  border: none !important;
+  color: '';
 }

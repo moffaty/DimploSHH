@@ -2,10 +2,38 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import handlebars from 'vite-plugin-handlebars';
 
+const musicName = 'Bee Music';
+const musicGenre = 'Synth Wave';
+
+const albums = 
+[
+  {
+    "id": "1",
+    "image": "public/img/portfolio/album1.jpg",
+    "title": "Threads",
+    "date": "2024"
+  },
+  {
+    "id": "2",
+    "image": "public/img/portfolio/album2.jpg",
+    "title": "Explore",
+    "date": "2016"
+  },
+  {
+    "id": "3",
+    "image": "public/img/portfolio/album3.jpg",
+    "title": "Finish",
+    "date": "2020"
+  }
+]
+
 const pageData = {
   '/views/index.html': {
     title: 'Main Page',
     currentPage: 'main',
+    musicName,
+    musicGenre,
+    albums,
   },
   '/views/test1.html': {
     title: 'Sub Page',

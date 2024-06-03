@@ -2,7 +2,7 @@ function stickHeader() {
     const header = document.querySelector('#header');
     if (    
         document.body.scrollTop > window.innerHeight ||
-        document.documentElement.scrollTop > window.innerHeight
+        document.documentElement.scrollTop + 60 > window.innerHeight
     ) {
         header.classList.add('fixed-top');
         header.querySelector('ul').style.position = 'relative';

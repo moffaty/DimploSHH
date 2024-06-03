@@ -1,27 +1,40 @@
-const portfolioSection = document.querySelector('#portfolio');
+// Получение всех элементов с классом 'portfolio-link'
 const portfolioItems = document.querySelectorAll('.portfolio-link');
-const modal = document.querySelector('.modal');
-portfolioItems.forEach(item => {
-    item.addEventListener('click', e => {
-    e.preventDefault();
-    displayModal();
-    })
-})
+// Получение элемента модального окна
+const modalElement = document.getElementById('portfolioModal1');
 
-function displayModal() {
-    modal.classList.add('d-block');
-    modal.classList.remove('d-none');
+// Проверка, существует ли элемент модального окна
+if (modalElement) {
+    // Создание экземпляра модального окна Bootstrap
+    const modal = new bootstrap.Modal(modalElement);
+    modal.hide();
+    // Добавление обработчика событий для каждого элемента 'portfolio-link'
+    portfolioItems.forEach(item => {
+        item.addEventListener('click', e => {
+            e.preventDefault();
+            // Показ модального окна
+            const modalBody = document.querySelector('.modal-body');
+            const modalHeader = modalBody.querySelector('.header');
+            const modalText = modalBody.querySelector('#text');
+            const modalDate = modalBody.querySelector('#date');
+            const modalImg = modalBody.querySelector('.img-fluid');
+            const id = (item.href.split('#portfolioModal')[1]);
+            console.log(item.dataset.date);
+            modalHeader.textContent = 'Альбом ' + item.dataset.title;
+            modalImg.src = item.dataset.image;
+            modalDate.textContent = item.dataset.date;
+            modal.show();
+        });
+    });
+
+    // Получение всех элементов с классом 'close' для закрытия модального окна
+    const closeButtons = document.querySelectorAll('.close');
+    closeButtons.forEach(closeButton => {
+        closeButton.addEventListener('click', e => {
+            // Закрытие модального окна
+            modal.hide();
+        });
+    });
+} else {
+    console.error('Модальное окно не найдено');
 }
-
-function closeModal() {
-    modal.classList.add('d-none');
-    modal.classList.remove('d-block');
-}
-
-// close modal
-const closeButtons = document.querySelectorAll('.close')
-closeButtons.forEach(closeButton => {
-    closeButton.addEventListener('click', e => {
-        closeModal();
-    })
-})
