@@ -1,125 +1,125 @@
 .img-text {
-    position: absolute;
-    bottom: 14px;
-    padding: 0 10px;
-    color: #fff;
+  position: absolute;
+  bottom: 14px;
+  padding: 0 10px;
+  color: #fff;
 }
 .card-img {
-    width: 100%;
+  width: 100%;
 }
 .card-text {
-    line-height: 110%;
-    font-weight: 500;
+  line-height: 110%;
+  font-weight: 500;
 }
 .mbr-overlay {
-    background-color: #000;
-    bottom: 0;
-    left: 0;
-    opacity: .5;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 0;
-    pointer-events: none;
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 .card__professional {
-    line-height: 1.72;
-    font-weight: 300;
+  line-height: 1.72;
+  font-weight: 300;
 }
 .card-subtitle {
-    line-height: 1.2;
+  line-height: 1.2;
 }
 .card-main-info {
-    position: relative;
-    border-radius: 10px;
+  position: relative;
+  border-radius: 10px;
 }
 .wrapper {
-    background-color: #d7e2e9;
-    border-radius: 10px;
-    padding: 1rem;
+  background-color: #d7e2e9;
+  border-radius: 10px;
+  padding: 1rem;
 }
 .mbr-section-title {
-    margin: 0;
-    margin-bottom: 3rem;
+  margin: 0;
+  margin-bottom: 3rem;
 }
 @media (min-width: 992px) {
-    .wrapper {
-        padding: 3rem;
-    }
+  .wrapper {
+    padding: 3rem;
+  }
 }
 
 .cid-sISoY579pI {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    background-image: url('../img/city.jpg');
-    background-position: cover;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-image: url("../img/city.jpg");
+  background-position: cover;
 }
 
 .mbr-overlay {
-    background-color: #000;
-    bottom: 0;
-    left: 0;
-    opacity: .5;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 0;
-    pointer-events: none;
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .cid-sISoY579pI .list-item {
-    color: #fff;
-    padding: 30px 0;
-    border-bottom-color: #ffffff !important;
+  color: #fff;
+  padding: 30px 0;
+  border-bottom-color: #ffffff !important;
 }
 
 .cid-sISoY579pI .mbr-section-title {
-    margin-bottom: 80px;
-    color: #fff;
+  margin-bottom: 80px;
+  color: #fff;
 }
 
 .cid-sISoY579pI .mbr-text {
-    font-weight: 300;
-    line-height: 1.72;
+  font-weight: 300;
+  line-height: 1.72;
 }
 
 .cid-sISoY579pI .mbr-section-subtitle {
-    line-height: 139%;
+  line-height: 139%;
 }
 
 .cid-sISp4uPreC .card {
-    background: #edeff0 !important;
+  background: #edeff0 !important;
 }
 
 .card-container {
-    border-bottom: 1px solid #0000003d;
+  border-bottom: 1px solid #0000003d;
 }
 
 .card-columns {
-    @include media-breakpoint-only(lg) {
-      column-count: 4;
-    }
-    @include media-breakpoint-only(xl) {
-      column-count: 5;
-    }
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
   }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
 
 .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .card-img-top {
-    height: 200px;
-    background-image: linear-gradient(45deg, #ff6b6b, #ffb88c);
+  height: 200px;
+  background-image: linear-gradient(45deg, #ff6b6b, #ffb88c);
 }
 
 .card-img-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: opacity 0.3s;
-    opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s;
+  opacity: 0;
 }
 
 .card:hover .card-img-overlay {
-    opacity: 1;
+  opacity: 1;
 }

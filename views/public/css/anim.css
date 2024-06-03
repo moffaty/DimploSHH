@@ -1,145 +1,148 @@
-.left-text, .right-text {
-    position: fixed;
-    top: 50%;
-    color: #333;
-    font-size: 24px;
-    display: inline-block;
-    white-space: nowrap; /* чтобы текст не переносился */
-    opacity: 0; /* начальная непрозрачность */
-    transition: opacity 0.5s ease; /* добавим плавное появление */
+.left-text,
+.right-text {
+  position: fixed;
+  top: 50%;
+  color: #333;
+  font-size: 24px;
+  display: inline-block;
+  white-space: nowrap; /* чтобы текст не переносился */
+  opacity: 0; /* начальная непрозрачность */
+  transition: opacity 0.5s ease; /* добавим плавное появление */
 }
 
 .left-text {
-    left: -1%; /* начальная позиция за пределами экрана слева */
+  left: -1%; /* начальная позиция за пределами экрана слева */
 }
 
 .right-text {
-    right: -1%; /* начальная позиция за пределами экрана справа */
+  right: -1%; /* начальная позиция за пределами экрана справа */
 }
 
 .left-text.animate-out {
-    animation: slideLeftOut 0.5s ease forwards; /* анимация для скрытия слева */
+  animation: slideLeftOut 0.5s ease forwards; /* анимация для скрытия слева */
 }
 
 .right-text.animate-out {
-    animation: slideRightOut 0.5s ease forwards; /* анимация для скрытия справа */
+  animation: slideRightOut 0.5s ease forwards; /* анимация для скрытия справа */
 }
 
 .left-text.animate-in {
-    animation: slideLeftIn 0.5s ease forwards; /* анимация для скрытия слева */
+  animation: slideLeftIn 0.5s ease forwards; /* анимация для скрытия слева */
 }
 
 .right-text.animate-in {
-    animation: slideRightIn 0.5s ease forwards; /* анимация для скрытия справа */
+  animation: slideRightIn 0.5s ease forwards; /* анимация для скрытия справа */
 }
 
 @keyframes slideLeftIn {
-    0% {
-        opacity: 0; /* начальная непрозрачность */
-        transform: translateX(-100%); /* начальное положение за пределами экрана */
-    }
-    100% {
-        opacity: 1; /* конечная непрозрачность */
-        transform: translateX(0); /* перемещение в начальное положение на экране */
-    }
+  0% {
+    opacity: 0; /* начальная непрозрачность */
+    transform: translateX(-100%); /* начальное положение за пределами экрана */
+  }
+  100% {
+    opacity: 1; /* конечная непрозрачность */
+    transform: translateX(0); /* перемещение в начальное положение на экране */
+  }
 }
 
 @keyframes slideRightIn {
-    0% {
-        opacity: 0; /* начальная непрозрачность */
-        transform: translateX(100%); /* начальное положение за пределами экрана */
-    }
-    100% {
-        opacity: 1; /* конечная непрозрачность */
-        transform: translateX(0); /* перемещение в начальное положение на экране */
-    }
+  0% {
+    opacity: 0; /* начальная непрозрачность */
+    transform: translateX(100%); /* начальное положение за пределами экрана */
+  }
+  100% {
+    opacity: 1; /* конечная непрозрачность */
+    transform: translateX(0); /* перемещение в начальное положение на экране */
+  }
 }
 
 @keyframes slideLeftOut {
-    0% {
-        opacity: 1; /* начальная непрозрачность */
-        transform: translateX(0); /* начальное положение */
-    }
-    100% {
-        opacity: 0; /* конечная непрозрачность */
-        transform: translateX(-100%); /* перемещение влево за пределы экрана */
-    }
+  0% {
+    opacity: 1; /* начальная непрозрачность */
+    transform: translateX(0); /* начальное положение */
+  }
+  100% {
+    opacity: 0; /* конечная непрозрачность */
+    transform: translateX(-100%); /* перемещение влево за пределы экрана */
+  }
 }
 
 @keyframes slideRightOut {
-    0% {
-        opacity: 1; /* начальная непрозрачность */
-        transform: translateX(0); /* начальное положение */
-    }
-    100% {
-        opacity: 0; /* конечная непрозрачность */
-        transform: translateX(100%); /* перемещение вправо за пределы экрана */
-    }
+  0% {
+    opacity: 1; /* начальная непрозрачность */
+    transform: translateX(0); /* начальное положение */
+  }
+  100% {
+    opacity: 0; /* конечная непрозрачность */
+    transform: translateX(100%); /* перемещение вправо за пределы экрана */
+  }
 }
 
-
-.about-left, .about-right {
-    position: relative;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+.about-left,
+.about-right {
+  position: relative;
+  opacity: 0;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 .about-left.in {
-    animation: slideInLeft 0.5s forwards;
+  animation: slideInLeft 0.5s forwards;
 }
 
 .about-left.out {
-    animation: slideOutLeft 0.5s forwards;
+  animation: slideOutLeft 0.5s forwards;
 }
 
 .about-right.in {
-    animation: slideInRight 0.5s forwards;
+  animation: slideInRight 0.5s forwards;
 }
 
 .about-right.out {
-    animation: slideOutRight 0.5s forwards;
+  animation: slideOutRight 0.5s forwards;
 }
 
 @keyframes slideInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideOutLeft {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes slideInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideOutRight {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
 }

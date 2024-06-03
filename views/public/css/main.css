@@ -1,14 +1,15 @@
 @font-face {
-    font-family: 'Seymour-One';
-    src: url('../font/Seymour_One/SeymourOne-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  font-family: "Seymour-One";
+  src: url("../font/Seymour_One/SeymourOne-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 @font-face {
-  font-family: 'Danfo';
-  src: url('../font/Danfo/Danfo-Regular-VariableFont_ELSH.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  font-family: "Danfo";
+  src: url("../font/Danfo/Danfo-Regular-VariableFont_ELSH.ttf")
+    format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 @font-face {
-  font-family: 'Amatic_SC';
-  src: url('../font/Amatic_SC/AmaticSC-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  font-family: "Amatic_SC";
+  src: url("../font/Amatic_SC/AmaticSC-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
 /* Общие стили */
@@ -83,23 +84,23 @@ html {
 }
 /* Добавим стили для наведения на ссылки */
 .nav-container ul li a:hover {
-    color: rgb(202, 202, 0); /* Изменяем цвет текста при наведении */
+  color: rgb(202, 202, 0); /* Изменяем цвет текста при наведении */
 }
 
 /* Анимация для появления */
 @keyframes fadeIn {
-    from {
-        opacity: 0.9;
-        transform: translateY(-50px); /* Начальное значение смещения вверх */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0); /* Конечное значение без смещения */
-    }
+  from {
+    opacity: 0.9;
+    transform: translateY(-50px); /* Начальное значение смещения вверх */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Конечное значение без смещения */
+  }
 }
 
 #about {
-  background-image: url('../img/texture_2.jpg');
+  background-image: url("../img/texture_2.jpg");
   background-repeat: repeat; /* повторять изображение по горизонтали и вертикали */
   background-size: auto; /* автоматически подстроить размер фона */
 }
@@ -110,7 +111,7 @@ html {
 
 .timeline-image {
   clip-path: polygon(50% 0%, 85% 25%, 85% 75%, 50% 100%, 15% 75%, 15% 25%);
-  border-color: '';
+  border-color: "";
   border: none !important;
-  color: '';
+  color: "";
 }
