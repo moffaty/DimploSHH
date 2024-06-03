@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let aboutRect = aboutSection.getBoundingClientRect();
         return (
             rect.top + 400 >= breakthroughRect.bottom &&
-            rect.bottom + 200 <= aboutRect.top
+            rect.bottom <= aboutRect.top + 600
         );
     }
     function updateTextVisibility() {

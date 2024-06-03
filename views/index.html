@@ -1,72 +1,12 @@
     {{> head}}
   <body>
-    <!-- Контейнер для изображения фона и текста -->
-    <div class="gif-container">
-      <!-- Изображение фона -->
-      <img
-        class="gif-background"
-        src="public/img/leary-avantgarde.gif"
-        alt="backGIF"
-      />
-      <!-- Текст -->
-      <div class="text-container">{{ musicName }}</div>
-    </div>
+    {{> gif}}
     {{> header}}
-    <div
-      class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center"
-    >
-      <div class="col-md-6 p-lg-5 mx-auto my-5">
-        <h2 class="display-3 fw-bold">{{musicName}} прорывной артист в {{musicGenre}}</h2>
-        <h3 class="fw-normal text-muted mb-3">
-          Слушайте свежие альбомы прямо сейчас!
-        </h3>
-        <div class="d-flex gap-3 justify-content-center lead fw-normal">
-          <a class="icon-link" href="#about">
-            О исполнителе
-            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-          </a>
-          <a class="icon-link" href="#portfolio">
-            Купить альбом
-            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-          </a>
-        </div>
-      </div>
-      <div class="product-device shadow-sm d-none d-md-block"></div>
-      <div
-        class="product-device product-device-2 shadow-sm d-none d-md-block"
-      ></div>
-    </div>
-    <div class="left-text"><img src="public/img/honey.png" height="100px" style="transform: scaleX(-1);"></div>
-    <div class="right-text"><img src="public/img/honey.png" height="100px"></div>
-    <div
-      class="text-bg-warning pt-3 pt-md-5 px-md-5 text-center overflow-hidden"
-    >
-      <div class="my-3 py-3">
-        <h2 class="display-5">Что такое SynthWave?</h2>
-        <p class="lead text-muted">Лучшее что вы слышали...</p>
-      </div>
-      <div
-        class="bg-body-tertiary shadow-sm mx-auto d-flex align-items-center justify-content-center"
-        style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
-      >
-    <p>"Synthwave" - это жанр электронной музыки, который олицетворяет собой смесь ретро-футуристического звучания 80-х годов и современных электронных элементов. Исполнители synthwave создают музыку, которая захватывает слушателя и переносит его в мир киберпанка, насыщенный яркими цветами и огнями ночных городов.</p></div>
-    </div>
-    <div
-    class="text-bg-warning pb-5 px-md-5 text-center overflow-hidden"
-  >
-    <div
-      class="bg-body-tertiary shadow-sm mx-auto d-flex align-items-center justify-content-center"
-      style="width: 80%; height: 300px; border-radius: 0 0 21px 21px"
-    ><p>При прослушивании synthwave музыки, вы можете ощутить волнение и ностальгию за эпоху, которая кажется как будто уже была, но все еще остается в наших сердцах и воспоминаниях. Отличительными чертами этого жанра являются кибернетическая атмосфера, глубокие синтезаторные звуки и энергичные ритмы, которые заставляют двигаться даже самого закоренелого скептика.</p></div>
-  </div>
-    <section data-bs-version="5" class="Article2 cid-sISp0JUE9m m-0 p-0" id="afisha">
-        <div class="wrapper p-auto m-auto d-flex align-items-center justify-content-center flex-column">
-            {{> concerts}}
-            {{> concerts}}
-            {{> concerts}}
-            <a href="#about" class="mt-5 p-auto btn btn-warning text-decoration-none text-black font-weight-bold">Узнайте историю нового альбома прямо сейчас!</a>
-        </div>
-    </section>
+    {{> intro}}
+    <div class="left-text h-100"><img src="public/img/honey.png" style="height: 5rem; transform: scaleX(-1);"></div>
+    <div class="right-text h-100"><img src="public/img/honey.png" style="height: 5rem;"></div>
+    {{> promo}}
+    {{> afisha}}
     {{> about}}
     {{> albums}}
     {{> team}}

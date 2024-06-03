@@ -6,6 +6,10 @@
   font-family: 'Danfo';
   src: url('../font/Danfo/Danfo-Regular-VariableFont_ELSH.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
+@font-face {
+  font-family: 'Amatic_SC';
+  src: url('../font/Amatic_SC/AmaticSC-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 
 /* Общие стили */
 body,
