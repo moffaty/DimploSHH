@@ -5,27 +5,27 @@ import handlebars from 'vite-plugin-handlebars';
 const musicName = 'Bee Music';
 const musicGenre = 'Synth Wave';
 
-const albums = 
-[
-  {
-    "id": "1",
-    "image": "public/img/portfolio/album1.jpg",
-    "title": "Threads",
-    "date": "2024"
-  },
-  {
-    "id": "2",
-    "image": "public/img/portfolio/album2.jpg",
-    "title": "Explore",
-    "date": "2016"
-  },
-  {
-    "id": "3",
-    "image": "public/img/portfolio/album3.jpg",
-    "title": "Finish",
-    "date": "2020"
-  }
-]
+const albums =
+  [
+    {
+      "id": "1",
+      "image": "public/img/portfolio/album1.jpg",
+      "title": "Threads",
+      "date": "2024"
+    },
+    {
+      "id": "2",
+      "image": "public/img/portfolio/album2.jpg",
+      "title": "Explore",
+      "date": "2016"
+    },
+    {
+      "id": "3",
+      "image": "public/img/portfolio/album3.jpg",
+      "title": "Finish",
+      "date": "2020"
+    }
+  ]
 
 const pageData = {
   '/views/index.html': {
@@ -42,9 +42,9 @@ const pageData = {
 };
 
 export default defineConfig({
-  root: './', 
+  root: './',
   build: {
-    outDir: 'views/public',
+    outDir: 'dist',
   },
   plugins: [
     handlebars({
